@@ -1,9 +1,10 @@
-text = input("input: ")
+def shorten(word):
+    vowels = "aeiouAEIOU"
+    return "".join([char for char in word if char not in vowels])
 
-# remove all vowels from the text
-text_without_vowels = ""
-for char in text:
-    if char.lower() not in "aeiou":
-        text_without_vowels += char
+def main():
+    name = input("Input: ")
+    print(f"hello, {shorten(name)}")
 
-print("output:", text_without_vowels)
+if __name__ == "__main__":
+    main()
